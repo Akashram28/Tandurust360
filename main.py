@@ -264,7 +264,7 @@ class VideoProcessor:
         """
         # Pose detection model
         image.flags.writeable = False
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         results = pose.process(image)
 
         # Draw the hand annotations on the image.
