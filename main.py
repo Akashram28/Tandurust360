@@ -167,7 +167,7 @@ class VideoProcessor:
         Counts repetitions of each exercise. Global count and stage (i.e., state) variables are updated within this function.
         
         """
-        
+        # curl
         if self.current_action == 'curl':
             # Get coords
             shoulder = self.get_coordinates(landmarks, mp_pose, 'left', 'shoulder')
@@ -194,7 +194,8 @@ class VideoProcessor:
                     
                 # Viz joint angle
                 self.viz_joint_angle(image, angle, elbow)
-            
+
+        # press    
         elif self.current_action == 'press':           
             # Get coords
             shoulder = self.get_coordinates(landmarks, mp_pose, 'left', 'shoulder')
@@ -226,7 +227,7 @@ class VideoProcessor:
                 # Viz joint angle
                 self.viz_joint_angle(image, elbow_angle, elbow)
             
-            
+        # squat    
         elif self.current_action == 'squat':
             # Get coords
             # left side
